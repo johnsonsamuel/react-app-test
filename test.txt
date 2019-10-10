@@ -1,1 +1,2 @@
-JTesting event emitters for Push.Finally to test commit and push using probot:
+added gpg verification.
+
