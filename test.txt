@@ -1,2 +1,2 @@
-Updated gpg key  verification.
+Signed commit. Updated gpg key  verification.
 
