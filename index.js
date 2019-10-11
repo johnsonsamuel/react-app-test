@@ -1,1 +1,1 @@
-console.log(' Johnson Samuel');
+_console.log(' Johnson Samuel');
