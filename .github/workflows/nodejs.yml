@@ -27,5 +27,3 @@ jobs:
         echo test, and deploy your project.
       env:
         CI: true
-    - name: ESLint checks
-      uses: gimenete/eslint-action@1.0
