@@ -1,3 +1,3 @@
 console.log('Johnson Samuel');
 
- const name = "Sss";;
+ const name = "Sss";
