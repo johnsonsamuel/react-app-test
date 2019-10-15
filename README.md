@@ -1,4 +1,1 @@
-<<<<<<< HEAD
-=======
-hssssss\
->>>>>>> master
+hssssss
