@@ -12,10 +12,14 @@ jobs:
         node-version: [8.x]
 
     steps:
-    - name: npm lint
+    - uses: actions/checkout@v1
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - name: npm run test
       run: |
         npm install
         npm run test
-        echo Add other actions to build..
       env:
         CI: true
