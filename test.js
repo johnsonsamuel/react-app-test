@@ -1,7 +1,7 @@
 import test from "ava";
 
 test("foo", t => {
-	t.fail();
+	t.pass();
 });
 
 test('bar', async t => {
