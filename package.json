@@ -16,7 +16,7 @@
   },
   "ava": {
     "files": [
-        "test.js"
+      "**/*.spec.js"
     ],
     "powerAssert": true,
     "failFast": false,
