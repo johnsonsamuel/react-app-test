@@ -14,6 +14,16 @@
     "test": "ava",
     "lint": "eslint ."
   },
+  "ava": {
+    "files": [
+        "test.js"
+    ],
+    "powerAssert": true,
+    "failFast": false,
+    "failWithoutAssertions": true,
+    "babel": {},
+    "verbose": true
+},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/johnsonsamuel/react-app-test.git"
