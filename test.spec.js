@@ -1,5 +1,5 @@
 import test from "ava";
-//hola col
+//hola fola
 
 test("fooo", t => {
 	t.pass();
