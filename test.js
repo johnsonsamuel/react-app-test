@@ -1,4 +1,4 @@
-/* Modules  s*/
+/* Modules  */
 
 var test = require('tape');
 
