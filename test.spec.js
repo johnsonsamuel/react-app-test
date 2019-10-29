@@ -2,7 +2,10 @@ import test from "ava";
 //hola fol
 
 test("fooo", t => {
-	t.throws(() => '##[error] Test failed.');
+	const error = {
+		message: '##[error] Test failed.'
+	}
+	t.throws(() => error.message);
 });
 
 // test("bar", async t => {
