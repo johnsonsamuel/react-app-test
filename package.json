@@ -12,6 +12,7 @@
     "ava-tap-json": "^2.0.4",
     "eslint": "^6.5.1",
     "eslint-plugin-react": "^7.16.0",
+    "jest": "^24.9.0",
     "tap": "^14.8.2",
     "tap-json": "^1.0.0"
   },
