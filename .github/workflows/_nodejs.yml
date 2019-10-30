@@ -17,6 +17,8 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
+    - name: Jest Snapshots
+      uses: gimenete/github-jest-snapshots@1.0
     - name: npm install, build, and test
       run: |
         npm ci
@@ -24,5 +26,3 @@ jobs:
         npx jest sum.spec.js
       env:
         CI: true
-    - name: Jest Snapshots
-      uses: gimenete/github-jest-snapshots@1.0
