@@ -1,15 +1,17 @@
-import test from "ava";
-//hola fol
+const test = require("ava");
 
-test("fooo", t => {
-	const error = {
-		message: ["##[error] Test failed1","##[error] Test failed2"]
-	}
-	t.throws(() => error.message);
+test("Should pass", t => {
+	t.pass();
 });
 
-// test("bar", async t => {
-// 	const bar = Promise.resolve("bar");
-// 	t.is(await bar, "bsrhh");
-// });
-//
+
+
+test("bar", async t => {
+	const bar = Promise.resolve("bar");
+	t.is(await bar, "ba");
+});
+
+test("should be equal", async t => {
+	const bar = 3;
+	t.deepEqual(bar, 1);
+});

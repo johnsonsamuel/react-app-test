@@ -1,4 +1,4 @@
-import test from "ava";
+var test = require('ava');
 
 test("hola", t => {
 	t.fail();
