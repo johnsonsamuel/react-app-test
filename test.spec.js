@@ -3,7 +3,7 @@ import test from "ava";
 
 test("fooo", t => {
 	const error = {
-		message: '##[error] Test failed.'
+		message: ["##[error] Test failed1","##[error] Test failed2"]
 	}
 	t.throws(() => error.message);
 });
