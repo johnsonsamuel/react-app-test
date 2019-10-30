@@ -5,6 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "ava": "^2.1.0",
+    "jest-snapshot": "^24.9.0",
     "tap-bail": "^1.0.0",
     "tape": "^4.11.0"
   },
