@@ -24,3 +24,5 @@ jobs:
         npx jest sum.spec.js
       env:
         CI: true
+    - name: Jest Snapshots
+      uses: gimenete/github-jest-snapshots@1.0
