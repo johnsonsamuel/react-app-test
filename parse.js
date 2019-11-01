@@ -62,6 +62,7 @@ process.stdin.on('end', () => {
       //console.log('File Name', fileName.split('(')[1]+'js');
   })
 
-  console.log(annotations)
+  console.error(annotations)
+  //throw Error(JSON.stringify(annotations));
   //console.log('ERRORS', [].concat.apply([], errors).map(item => JSON.parse(item)));
 });
