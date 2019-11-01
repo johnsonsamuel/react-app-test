@@ -57,7 +57,7 @@ process.stdin.on('end', () => {
           path: path
       })
 
-      //console.log(lineNumbers)
+      //console.log(lineNumbers);
       //console.log('Line number', splitItem[1].replace(")'",""));
       //console.log('File Name', fileName.split('(')[1]+'js');
   })
