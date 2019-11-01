@@ -1,17 +1,18 @@
 const test = require("ava");
 
 test("Should pass", t => {
-	t.pass();
+	t.fail();
 });
 
-
-
-test("bar", async t => {
-	const bar = Promise.resolve("bar");
-	t.is(await bar, "ba");
-});
-
-test("should be equal", async t => {
+test("should be equal", t => {
 	const bar = 3;
 	t.deepEqual(bar, 1);
 });
+
+test("should 2 equal", t => {
+	const bar = 3;
+	t.is(bar, 1);
+});
+
+
+

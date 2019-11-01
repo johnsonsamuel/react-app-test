@@ -15,7 +15,8 @@
     "eslint-plugin-react": "^7.16.0",
     "jest": "^24.9.0",
     "tap": "^14.8.2",
-    "tap-json": "^1.0.0"
+    "tap-json": "^1.0.0",
+    "tap-parser": "^10.0.1"
   },
   "scripts": {
     "test": "ava",
