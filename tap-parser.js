@@ -24,7 +24,7 @@ var p = new Parser(function (results) {
       
       const path = fileName.split('(')[1]+'js';
     //   console.log(path);
-      console.log(lineNumbers);
+      //console.log(lineNumbers);
       annotations.push({
         start_line: parseInt(lineNumbers[0]),
         end_line: parseInt(lineNumbers[0]),
@@ -38,8 +38,8 @@ var p = new Parser(function (results) {
     textAnnotations.push(`##error ${splitItem[1].replace(")","")} error ${JSON.stringify(message)} `)
    })
    //console.log(annotations);
-   /console.log(textAnnotations);
-   throw Error(textAnnotations);
+   console.log(textAnnotations);
+   //throw Error(textAnnotations);
 });
 
 
