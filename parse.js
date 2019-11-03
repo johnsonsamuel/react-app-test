@@ -7,13 +7,18 @@ process.stdin.on('readable', () => {
   // Use a loop to make sure we read all available data.
   while ((chunk = process.stdin.read()) !== null) {
      const atRegex = /at.*/g;
+     const messageRegex = /message.*/g;
+     const assertionRegex = /values.*/g;
+     const valuesRegex = /values:([\S\s]*?)at:/g;
       if(chunk.indexOf('not ok') > 0 ){
           
           //console.log('$$$$$$$$$$$$$$$$$$$$')  
           if(chunk.match('message:')){
-            //console.log('Message', chunk.match('message:').input, '=====================')
+             console.log('Message', chunk.match(messageRegex))
           }else if(chunk.match('values:')){
-            //console.log('Values', chunk.match('values:').input, '+++++++++++++++++')
+              let values = chunk.match(valuesRegex);
+            console.log('Values', values);
+            console.log('Start Values++', chunk.match('values:').input, '+++ End Values')
           }
           //
 
@@ -34,6 +39,7 @@ process.stdin.on('readable', () => {
 //console.log(process.stdout.write.bind(process.stdout))
 //process.stdout.write.bind(process.stdout);
 const annotations = [];
+const oldAnnotations = [];
 process.stdin.on('end', () => {
   //process.stdout.write('end');
   //console.log('#########Data for Annotations##############');
@@ -62,7 +68,7 @@ process.stdin.on('end', () => {
       //console.log('File Name', fileName.split('(')[1]+'js');
   })
 
-  console.error(annotations)
+  //console.error(annotations)
   // throw (JSON.stringify(annotations));
   //console.log('ERRORS', [].concat.apply([], errors).map(item => JSON.parse(item)));
 });
