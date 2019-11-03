@@ -38,8 +38,8 @@ var p = new Parser(function (results) {
     textAnnotations.push(`##error ${splitItem[1].replace(")","")} error ${JSON.stringify(message)} `)
    })
    //console.log(annotations);
-   console.log(textAnnotations);
-   //throw Error(textAnnotations);
+   //console.log(textAnnotations);
+   throw Error(textAnnotations);
 });
 
 
