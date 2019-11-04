@@ -14,10 +14,8 @@ test("should 2 equal", t => {
 	t.is(bar, 1);
 }); */
 
-
-test('-', async t => {
-    await t.throws(() => [ '##error 4:4 error111',
-	'##error 3:1 erro2' ], [ '##error 4:4 error111',
-	'##error 3:1 erro2' ]);
-});
-
+test('test', async (t) => {
+	await t.throws( () => {
+	  throw new Error(['##error hola']);
+	}, ['##error hola']);
+  });
