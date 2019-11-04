@@ -4,7 +4,7 @@ const annotations = [];
 const textAnnotations = [];
 
 var p = new Parser(function (results) {
-   //console.dir(JSON.stringify(results).replace(/'/g, ""));
+   // console.dir(JSON.stringify(results).replace(/'/g, ""));
 
    JSON.parse(JSON.stringify(results).replace(/'/g, "")).failures.map(item => {
        //console.log(item.diag)
