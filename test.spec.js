@@ -14,10 +14,9 @@ test("should 2 equal", t => {
 	t.is(bar, 1);
 }); */
 
-const foo = Promise.reject(new Error([ '##error 4:4 error111',
-'##error 3:1 erro2' ]));
 
-test('', async t => {
-    await t.throws(foo, 'hello world');
+test('-', async t => {
+    await t.throws(() => [ '##error 4:4 error111',
+	'##error 3:1 erro2' ], 'hello world');
 });
 
