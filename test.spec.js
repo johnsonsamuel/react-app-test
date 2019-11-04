@@ -17,6 +17,7 @@ test("should 2 equal", t => {
 
 test('-', async t => {
     await t.throws(() => [ '##error 4:4 error111',
-	'##error 3:1 erro2' ], 'hello world');
+	'##error 3:1 erro2' ], [ '##error 4:4 error111',
+	'##error 3:1 erro2' ]);
 });
 
