@@ -38,8 +38,8 @@ var p = new Parser(function (results) {
     textAnnotations.push(`##[error] ${splitItem[1].replace(")","")} error ${JSON.stringify(message)} path:${path} name:${name}`)
    })
    //console.log(annotations);
-   console.log(textAnnotations);
-   /* throw Error(textAnnotations);
+   //console.log(textAnnotations);
+   throw Error(textAnnotations);
    throw [ '##[error] 3:1 error "test is not defined" ',
    '##[error] 4:4 error "Test failed via `t.fail()`" ' ]; */
 });
