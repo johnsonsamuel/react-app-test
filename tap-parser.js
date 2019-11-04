@@ -35,7 +35,7 @@ var p = new Parser(function (results) {
         message: JSON.stringify(message),
         path: path
     });
-    textAnnotations.push(`##[error] ${splitItem[1].replace(")","")} error ${JSON.stringify(message)} path:${path} annotations:${annotations}`)
+    textAnnotations.push(`##[error] ${splitItem[1].replace(")","")} error ${JSON.stringify(message)} path:${JSON.stringify(path)} annotations:${JSON.stringify(annotations)}`)
    })
    //console.log(annotations);
     console.log(textAnnotations);
