@@ -39,7 +39,7 @@ var p = new Parser(function (results) {
    })
    //console.log(annotations);
    //console.log(textAnnotations);
-   throw Error(textAnnotations);
+   //throw Error(textAnnotations);
 });
 
 
