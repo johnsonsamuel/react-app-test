@@ -15,8 +15,7 @@ test("should 2 equal", t => {
 }); */
 
 
-test("should 2 equal", t => {
-	const bar = 3;
-	t.is(bar, 3);
+test('-', async t => {
+    await t.throws(() => [ '##[error]   3:20  error  Strings must use doublequote' ], 'hello world');
 });
 
