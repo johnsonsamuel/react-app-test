@@ -16,6 +16,6 @@ test("should 2 equal", t => {
 
 
 test("-", async t => {
-    await t.throws(() => [ "##[error]  error  I am a test error" ], "hello world");
+    await t.throws(() => [ "##[error]  I am a test error", "##[error]  test2 hola error" ]);
 });
 
