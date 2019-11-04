@@ -4,7 +4,7 @@ const annotations = [];
 const textAnnotations = [];
 
 var p = new Parser(function (results) {
-   // console.dir(JSON.stringify(results).replace(/'/g, ""));
+   //console.dir(JSON.stringify(results).replace(/'/g, ""));
 
    JSON.parse(JSON.stringify(results).replace(/'/g, "")).failures.map(item => {
        //console.log(item.diag)
@@ -35,13 +35,13 @@ var p = new Parser(function (results) {
         message: JSON.stringify(message),
         path: path
     });
-    textAnnotations.push('##[error] '+splitItem[1].replace(")","")+' error '+JSON.stringify(message)+' path: '+path);
+    textAnnotations.push(`##[error] ${splitItem[1].replace(")","")} error ${JSON.stringify(message)} path:${path}`)
    })
    //console.log(annotations);
-    console.log(textAnnotations);
+   console.log(textAnnotations);
    //throw Error(textAnnotations);
-// throw [ '##[error] 3:1 error "test is not defined" ',
-//    '##[error] 4:4 error "Test failed via `t.fail()`" '];
+//    throw [ '##[error] 3:1 error "test is not defined" ',
+//    '##[error] 4:4 error "Test failed via `t.fail()`" ' ];
 });
 
 
