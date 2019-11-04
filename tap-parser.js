@@ -39,7 +39,10 @@ var p = new Parser(function (results) {
    })
    //console.log(annotations);
    //console.log(textAnnotations);
-   throw Error(textAnnotations);
+   
+   textAnnotations.map(error => {
+        throw Error(error);
+   });
    /*throw [ '##[error] 3:1 error "test is not defined" ',
    '##[error] 4:4 error "Test failed via `t.fail()`" ' ]; */
 });
