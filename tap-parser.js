@@ -45,7 +45,7 @@ var p = new Parser(function (results) {
    try {
     var errors = [];
     for (let i=0; i<textAnnotations.length; i++) {
-      errors.push(new Error(textAnnotations[i]));
+      errors.push(new Error('##[error]'+textAnnotations[i]));
     }
   
     if (errors.length > 0) {
