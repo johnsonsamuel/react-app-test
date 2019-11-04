@@ -31,7 +31,7 @@ var p = new Parser(function (results) {
         start_column: 0,
         end_column: parseInt(lineNumbers[1]),
         annotation_level: 'warning',
-        title: name,
+        title: 'name',
         message: JSON.stringify(message),
         path: path
     });
