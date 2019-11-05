@@ -34,7 +34,7 @@ var p = new Parser(function (results) {
     /* const errors = textAnnotations.map(error => new Error(error));
 
     console.error(errors); */
-    console.error(textAnnotations);
+    console.log(textAnnotations);
 
 });
 
