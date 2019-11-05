@@ -39,10 +39,10 @@ var p = new Parser(function (results) {
    })
    //console.log(annotations);
    
-   //console.log(textAnnotations);
+   console.log(textAnnotations);
    //throw textAnnotations;
 
-   try {
+   /* try {
     var errors = [];
     for (let i=0; i<textAnnotations.length; i++) {
       errors.push(new Error('##[error]'+textAnnotations[i]));
@@ -56,7 +56,7 @@ var p = new Parser(function (results) {
       for (let i=0; i<e.length; i++) {
         console.log(e[i]);
       }
-  }
+  } */
    
 //    textAnnotations.map(error => {
 //         throw Error(error);
