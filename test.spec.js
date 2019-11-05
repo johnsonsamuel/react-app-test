@@ -1,7 +1,7 @@
 const test = require("ava");
 
 test("Should pass", t => {
-	t.pass();
+	t.fail();
 });
 
 test("should be equal", t => {
