@@ -38,13 +38,13 @@ var p = new Parser(function (results) {
     textAnnotations.push(`##[error] ${splitItem[1].replace(")","")} error ${JSON.stringify(message)} path:${path} name:${name}`)
    })
    //console.log(annotations);
-   console.log(textAnnotations);
+   //console.log(textAnnotations);
    //throw textAnnotations;
 
-   /* try {
+   try {
     var errors = [];
     for (let i=0; i<textAnnotations.length; i++) {
-      errors.push(new Error('##[error]'+textAnnotations[i]));
+      errors.push(new Error(textAnnotations[i]));
     }
   
     if (errors.length > 0) {
@@ -55,7 +55,7 @@ var p = new Parser(function (results) {
       for (let i=0; i<e.length; i++) {
         console.log(e[i]);
       }
-  } */
+  }
    
 //    textAnnotations.map(error => {
 //         throw Error(error);
