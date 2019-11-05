@@ -31,9 +31,10 @@ var p = new Parser(function (results) {
         textAnnotations.push(`##[error] ${splitItem[1].replace(")", "")} error ${JSON.stringify(message)} path:${path} name:${name}`)
     });
 
-    const errors = textAnnotations.map(error => new Error(error));
+    /* const errors = textAnnotations.map(error => new Error(error));
 
-    console.error(errors);
+    console.error(errors); */
+    console.log(textAnnotations);
 
 });
 
