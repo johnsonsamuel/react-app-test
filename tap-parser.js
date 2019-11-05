@@ -30,40 +30,18 @@ var p = new Parser(function (results) {
         end_line: parseInt(lineNumbers[0]),
         start_column: 0,
         end_column: parseInt(lineNumbers[1]),
-        annotation_level: 'failure',
+        annotation_level: 'warning',
         title: name,
         message: JSON.stringify(message),
         path: path
     });
-
-    
-    textAnnotations.push(`##[error] ${splitItem[1].replace(")","")} error ${JSON.stringify(message)} path:${path} name:${name}`)
+    textAnnotations.push(`##[error] ${splitItem[1].replace(")","")} error ${JSON.stringify(message)} path:${path}`)
    })
    //console.log(annotations);
    console.log(textAnnotations);
-   //throw textAnnotations;
-
-//    try {
-//     var errors = [];
-//     for (let i=0; i<textAnnotations.length; i++) {
-//       errors.push(new Error(textAnnotations[i]));
-//     }
-  
-//     if (errors.length > 0) {
-//       throw errors; 
-//     }
-  
-//   } catch(e) {
-//       for (let i=0; i<e.length; i++) {
-//         console.log(e[i]);
-//       }
-//   }
-   
-//    textAnnotations.map(error => {
-//         throw Error(error);
-//    });
-   /*throw [ '##[error] 3:1 error "test is not defined" ',
-   '##[error] 4:4 error "Test failed via `t.fail()`" ' ]; */
+   //throw Error(textAnnotations);
+//    throw [ '##[error] 3:1 error "test is not defined" ',
+//    '##[error] 4:4 error "Test failed via `t.fail()`" ' ]; 
 });
 
 
