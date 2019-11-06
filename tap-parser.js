@@ -9,7 +9,7 @@ var p = new Parser(function (results) {
         total: testOutput.count,
         failure: testOutput.fail,
         success: testOutput.pass
-   }
+   };
 
    JSON.parse(JSON.stringify(results).replace(/'/g, "")).failures.map(item => {
        //console.log(item.diag)
