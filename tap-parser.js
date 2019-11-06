@@ -1,9 +1,11 @@
 var Parser = require('tap-parser');
 const annotations = [];
 
-const textAnnotations = [];
+const textAnnotations = []; //annotations to feed as per eslint
 
 var p = new Parser(function (results) {
+
+   //Adding the unit test count. 
    const testOutput = JSON.parse(JSON.stringify(results));
    const testSummary = {
         total: testOutput.count,
@@ -40,7 +42,7 @@ var p = new Parser(function (results) {
         message: JSON.stringify(message),
         path: path
     });
-    textAnnotations.push(`##[error] ${path} ${splitItem[1].replace(")","")} error ${JSON.stringify(message)} path:${path} name:${name}`)
+    textAnnotations.push(`##[error] ${splitItem[1].replace(")","")} error ${JSON.stringify(message)} path:${path} name:${name}`)
    });
 
    textAnnotations.push(testSummary);
