@@ -11,7 +11,7 @@ test("should be equal", t => {
 
 test("should 2 equal", t => {
 	const bar = 3;
-	t.is(bar, 1);
+	t.is(bar, 3);
 });
 
 /* test("-", async t => {
