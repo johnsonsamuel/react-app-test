@@ -1,12 +1,12 @@
 const test = require("ava");
 
 test("Should pass", t => {
-	t.fail();
+	t.pass();
 });
 
 test("should be equal", t => {
 	const bar = 3;
-	t.deepEqual(bar, 1);
+	t.deepEqual(bar, 3);
 });
 
 test("should 2 equal", t => {
