@@ -37,7 +37,7 @@ var p = new Parser(function (results) {
     });
     textAnnotations.push(`##[error] ${splitItem[1].replace(")","")} error ${JSON.stringify(message)} path:${path} name:${name}`)
    })
-   console.log(`[ 'test/sum.spec.js ##[error] 3:1 error "test is not defined" path:test/sum.spec.js name:ReferenceError' ]`)
+   console.log(`[ 'test/sum.spec.js ##[error] 3:1 error "test is not defined" path:test/sum.spec.js name:ReferenceError']`)
 });
 
 
