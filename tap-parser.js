@@ -5,7 +5,7 @@ const textAnnotations = []; //annotations to feed as per eslint
 
 var p = new Parser(function (results) {
 
-   //Adding the unit test count. 
+   //Adding the unit test count... 
    const testOutput = JSON.parse(JSON.stringify(results));
    const testSummary = {
         total: testOutput.count,
