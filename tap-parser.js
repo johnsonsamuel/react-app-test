@@ -25,6 +25,7 @@ var p = new Parser(function (results) {
       //const lineNumbersArr = splitItem[1];
       //console.log(splitItem[1].replace(")",""), '====')
       //console.log(JSON.parse(lineNumbers));
+      
      const lineNumbers = splitItem[1].replace(")","").split(':');
         
       //const lineNumbers = lineNumbersArr;
