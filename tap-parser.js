@@ -5,7 +5,7 @@ const textAnnotations = []; //annotations to feed as per eslint
 
 var p = new Parser(function (results) {
 
-   //Adding the unit test count..... 
+   //Adding the unit test count.... 
    const testOutput = JSON.parse(JSON.stringify(results));
    const testSummary = {
         total: testOutput.count,
@@ -42,10 +42,10 @@ var p = new Parser(function (results) {
         message: JSON.stringify(message),
         path: path
     });
-    //textAnnotations.push(`##[error] ${path}:${parseInt(lineNumbers[0])} ${splitItem[1].replace(")","")} error ${JSON.stringify(message)} path:${path} name:${name}`)
+    //textAnnotations.push(`##[error] ${splitItem[1].replace(")","")} error ${JSON.stringify(message)} path:${path} name:${name}`)
    });
 
-   textAnnotations.push(`##[path]  error I am a test error ##[path] test.spec.js:1 `, `##[path] test2 hola error ##[path] test.spec.js:1`);
+   textAnnotations.push('test.spec.js 1:14  error  require is not defined  no-undef');
    console.log(textAnnotations)
 });
 
