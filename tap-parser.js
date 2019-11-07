@@ -42,10 +42,10 @@ var p = new Parser(function (results) {
         message: JSON.stringify(message),
         path: path
     });
-    //textAnnotations.push(`##[error] ${splitItem[1].replace(")","")} error ${JSON.stringify(message)} path:${path} name:${name}`)
+    textAnnotations.push(`##[error] ${splitItem[1].replace(")","")} error ${JSON.stringify(message)} path:${path} name:${name}`)
    });
 
-   textAnnotations.push('test.spec.js ##[error] ##[add-path] test.spec.js 1:14  error  require is not defined  no-undef');
+   textAnnotations.push(testSummary);
    console.log(textAnnotations)
 });
 
