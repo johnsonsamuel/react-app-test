@@ -4,6 +4,7 @@ test("Should pass", t => {
 	t.fail();
 });
 
+
 test("should be equal", t => {
 	const bar = 3;
 	t.deepEqual(bar, 3);
