@@ -50,5 +50,4 @@ var p = new Parser(function (results) {
 });
 
 
-
 process.stdin.pipe(p);
