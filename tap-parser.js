@@ -45,7 +45,7 @@ var p = new Parser(function (results) {
     //textAnnotations.push(`##[error] ${path}:${parseInt(lineNumbers[0])} ${splitItem[1].replace(")","")} error ${JSON.stringify(message)} path:${path} name:${name}`)
    });
 
-   textAnnotations.push(`##[error] test.spec.js:1 error I am a test error `, `##[error] test.spec.js:1 error test2 hola error`);
+   textAnnotations.push(`##[error]  error I am a test error ##[path] test.spec.js:1 `, `##[error] test2 hola error ##[path] test.spec.js:1`);
    console.log(textAnnotations)
 });
 
