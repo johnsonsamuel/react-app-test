@@ -12,9 +12,7 @@ var p = new Parser(function (results) {
         failure: testOutput.fail,
         success: testOutput.pass
    };
-
-   JSON.parse(JSON.stringify(results).replace(/'/g, "")).failures.map(item => {
-       //console.log(item.diag)
+   JSON.parse(JSON.stringify(results).trim().replace(/'/g, "")).failures.map(item => {
        if(!item.diag) return;
        const splitItem = item.diag.at.split('js:');
       
@@ -44,7 +42,7 @@ var p = new Parser(function (results) {
         message: JSON.stringify(message),
         path: path
     });
-    textAnnotations.push(`##[error] ${splitItem[1].replace(")","")} error ${JSON.stringify(message)} path:${path} name:${name}`)
+    textAnnotations.push(`##[error] ${splitItem[1].replace(")","")} error ${message} path:${path} name:${name}`)
    });
 
    textAnnotations.push(testSummary);
