@@ -2,6 +2,7 @@ const test = require("ava");
 
 test("Should fail", t => {
 	t.fail();
+
 	
 });
 
