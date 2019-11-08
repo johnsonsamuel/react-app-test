@@ -65,7 +65,7 @@ var p = new Parser(function (results) {
         console.log(e[i]);
       }
   }
-  console.log(errors)
+  console.log(errors);
 });
 
 
