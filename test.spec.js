@@ -14,9 +14,9 @@ test("should 2 equal", t => {
 	t.is(bar, 3);
 });
 
-/* test("-", async t => {
-    await t.throws(() => [ "##[error]  I am a test error", "##[error]  test2 hola error" ]);
-}); */
+// test("-", async t => {
+//     await t.throws(() => [ "##[error]  I am a test error", "##[error]  test2 hola error" ]);
+// });
 
 test("Should pass", t => {
 	t.pass();
