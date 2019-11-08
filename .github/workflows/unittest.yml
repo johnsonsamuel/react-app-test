@@ -1,7 +1,5 @@
 name: Unit Test CI
 
-on: [push]
-
 jobs:
   build:
 
