@@ -47,25 +47,8 @@ var p = new Parser(function (results) {
     textAnnotations.push(`##[error] ${splitItem[1].replace(")","")} error ${JSON.stringify(message)} path:${path} name:${name}`)
    });
 
-   //textAnnotations.push(testSummary);
-   // console.log(textAnnotations);
-   try {
-    var errors = [];
-    
-    for (let i=0; i<textAnnotations.length; i++) {
-      errors.push(new Error(textAnnotations[i]));
-    }
-  
-    if (errors.length > 0) {
-      throw errors; 
-    }
-  
-  } catch(e) {
-      for (let i=0; i<e.length; i++) {
-        console.log(e[i]);
-      }
-  }
-  console.log(errors);
+   textAnnotations.push(testSummary);
+   console.log(textAnnotations)
 });
 
 
