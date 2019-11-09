@@ -46,6 +46,7 @@ var p = new Parser(function (results) {
 
 
 
+
     
     textAnnotations.push(`##[error] ${splitItem[1].replace(")","")} error ${message} path:${path} name:${name}`)
    });
