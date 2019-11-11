@@ -27,7 +27,6 @@ var p = new Parser(function (results) {
      const lineNumbers = splitItem[1].replace(")","").split(':');
         
       //const lineNumbers = lineNumbersArr;
-
       
       const path = fileName.split('(')[1]+'js';
     //   console.log(path);
