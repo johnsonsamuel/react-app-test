@@ -1,6 +1,8 @@
 name: Unit Test CI
 
-on: [push]
+on:
+  check_run:
+    types: [created]
 
 jobs:
   build:
