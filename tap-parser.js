@@ -42,8 +42,7 @@ const p = new Parser(function (results) {
    });
 
    checkApiAnnotationsFormat.push(testSummary);
-   checkApiAnnotationsFormat.push({annotations: annotations});
-   console.log(checkApiAnnotationsFormat);
+   console.log(checkApiAnnotationsFormat); //FIXME: Printing the error as per the check run format
 });
 
 
