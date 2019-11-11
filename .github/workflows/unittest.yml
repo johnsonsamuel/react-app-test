@@ -24,3 +24,4 @@ jobs:
         npx ava --tap | node tap-parser.js
       env:
         CI: false
+unittest: true
