@@ -1,7 +1,7 @@
 var Parser = require('tap-parser');
 const annotations = [];
 
-const textAnnotations = []; //annotations to feed as per eslint
+const textAnnotations = []; //annotations to feed as per github check api
 
 var p = new Parser(function (results) {
 
