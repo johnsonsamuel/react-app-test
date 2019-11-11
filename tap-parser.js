@@ -1,9 +1,9 @@
-var Parser = require('tap-parser');
+const Parser = require('tap-parser');
 const annotations = [];
 
 const textAnnotations = []; //annotations to feed as per github check api
 
-var p = new Parser(function (results) {
+const p = new Parser(function (results) {
 
    //Adding the unit test count.... 
    const testOutput = JSON.parse(JSON.stringify(results));
