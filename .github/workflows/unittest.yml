@@ -1,8 +1,6 @@
 name: Unit Test CI
 
-on:
-  check_run:
-    types: [created, rerequested, requested_action]
+on: [check_run]
 
 jobs:
   build:
