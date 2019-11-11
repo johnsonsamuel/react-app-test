@@ -1,5 +1,7 @@
 name: Unit Test CI
 
+unittest: true
+
 on: [push]
 
 jobs:
@@ -24,4 +26,4 @@ jobs:
         npx ava --tap | node tap-parser.js
       env:
         CI: false
-unittest: true
+
