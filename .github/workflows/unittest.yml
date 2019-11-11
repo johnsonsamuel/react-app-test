@@ -1,6 +1,8 @@
 name: Unit Test CI
 
-on: [check_run]
+on:
+  check_run:
+    types: [created, rerequested, requested_action]
 
 jobs:
   build:
@@ -22,12 +24,6 @@ jobs:
         npm ci
         npm run build --if-present
         npx ava --tap | node tap-parser.js
-    - name: Print a greeting
       env:
-        MY_VAR: Hi there! My name is
-        FIRST_NAME: Mona
-        MIDDLE_NAME: The
-        LAST_NAME: Octocat
-      run: |
-        echo $MY_VAR $FIRST_NAME $MIDDLE_NAME $LAST_NAME.
+        CI: false
 
