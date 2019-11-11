@@ -1,7 +1,7 @@
 const Parser = require('tap-parser');
 const annotations = [];
 
-const textAnnotations = []; //annotations to feed as per github check api...
+const checkApiAnnotationsFormat = []; //annotations to feed as per github check api...
 
 const p = new Parser(function (results) {
 
@@ -12,7 +12,12 @@ const p = new Parser(function (results) {
         failure: testOutput.fail,
         success: testOutput.pass
    };
-   JSON.parse(JSON.stringify(results).trim().replace(/'/g, "")).failures.map(item => {
+
+   const stringifiedResult =  JSON.stringify(results).trim(); 
+   const parseResult = JSON.parse(stringifiedResult.replace(/'/g, ""));
+
+   //Iterate through the failures and add annotations 
+   parseResult.failures.map(item => {
        if(!item.diag) return;
        const splitItem = item.diag.at.split('js:');
       
@@ -33,11 +38,12 @@ const p = new Parser(function (results) {
         path: path
     });
 
-    textAnnotations.push(`##[error] ${splitItem[1].replace(")","")} error ${message} path:${path} name:${name}`)
+    checkApiAnnotationsFormat.push(`##[error] ${splitItem[1].replace(")","")} error ${message} path:${path} name:${name}`)
    });
 
-   textAnnotations.push(testSummary);
-   console.log(textAnnotations)
+   checkApiAnnotationsFormat.push(testSummary);
+   checkApiAnnotationsFormat.push({annotations: annotations});
+   console.log(checkApiAnnotationsFormat);
 });
 
 
