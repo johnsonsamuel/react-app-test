@@ -1,7 +1,7 @@
 const Parser = require('tap-parser');
 const annotations = [];
 
-const textAnnotations = []; //annotations to feed as per github check api.........
+const textAnnotations = []; //annotations to feed as per github check api.......
 
 const p = new Parser(function (results) {
 
