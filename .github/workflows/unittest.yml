@@ -1,5 +1,3 @@
-version: 1
-
 name: Unit Test CI
 
 on: [push]
