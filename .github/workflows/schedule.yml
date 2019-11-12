@@ -1,5 +1,4 @@
 name: Schedule CI
-
 on: 
 
 schedule:
