@@ -5,6 +5,7 @@ on: push
 jobs:
   job_3:
     name: Display results
+    runs-on: ubuntu-latest
     steps:
       - name: Print the final result
         shell: bash
