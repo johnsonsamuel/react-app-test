@@ -1,15 +1,20 @@
-name: Check npm outdated CI
+name: Outdated npm check
 
-on: push
+on: [push]
 
 jobs:
-  job_3:
-    name: Display results
-    runs-on: ubuntu-latest
-    steps:
-      - name: Print the final result
-        shell: bash
-        run: |
-          npm outdated
+  build:
 
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [8.x]
+
+    steps:
+    - name: npm install, build, and test
+      run: |
+        npm outdated > results.html
+      env:
+        CI: false
 
