@@ -38,9 +38,11 @@ const p = new Parser(function (results) {
         path: path
     });
 
-    checkApiAnnotationsFormat.push(`##[error] ${splitItem[1].replace(")","")} file=${path} error ${message} path:${path} name:${name}`);
+    //checkApiAnnotationsFormat.push(`##[error] ${splitItem[1].replace(")","")} file=${path} error ${message} path:${path} name:${name}`);
     //checkApiAnnotationsFormat.push(`##[error] ${splitItem[1].replace(")","")} file=${path}, line=${parseInt(lineNumbers[0])} ,col=0::${message}`)
    });
+
+   checkApiAnnotationsFormat.push(`echo "::warning file=test.spec.js,line=4,col=0::Missing semicolon"`)
 
    checkApiAnnotationsFormat.push(testSummary);
    console.log(checkApiAnnotationsFormat); //FIXME: Printing the error as per the check run format
