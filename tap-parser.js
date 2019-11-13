@@ -38,8 +38,8 @@ const p = new Parser(function (results) {
         path: path
     });
 
-    //checkApiAnnotationsFormat.push(`##[error] ${splitItem[1].replace(")","")} file=${path} error ${message} path:${path} name:${name}`);
-    checkApiAnnotationsFormat.push(`##[error] path:${path}, file=${path},line=${parseInt(lineNumbers[0])},col=0, message=${message}`)
+    checkApiAnnotationsFormat.push(`##[debug] ${splitItem[1].replace(")","")} file=${path} error ${message} path:${path} name:${name}`);
+  //checkApiAnnotationsFormat.push(`##[error] ${message} ${splitItem[1].replace(")","")} file=${path}, line=${parseInt(lineNumbers[0])} ,col=0::${message}`)
    });
 
    checkApiAnnotationsFormat.push(testSummary);
