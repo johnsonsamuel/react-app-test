@@ -1,17 +1,20 @@
-name: Greeting from Mona
+name: Check npm outdated CI
 
-on: push
+on: [push]
 
 jobs:
-  my-job:
-    name: My Job
+  build:
+
     runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [8.x]
+
     steps:
-    - name: Print a greeting
+    - name: npm outdated
+      run:
+        npm outdated
       env:
-        MY_VAR: Hi there! My name is
-        FIRST_NAME: Mona
-        MIDDLE_NAME: The
-        LAST_NAME: Octocat
-      run: |
-        npm outdated.
+        CI: true
+
