@@ -19,7 +19,8 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - name: npm outdated
       run: |
-        npm outdated > results.html
+        value=npm outdated
+        echo $value
       env:
         CI: false
 
