@@ -1,4 +1,4 @@
-name: Outdated npm check
+name: Outdated npm check.
 
 on: [push]
 
