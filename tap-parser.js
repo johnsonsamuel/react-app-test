@@ -39,7 +39,7 @@ const p = new Parser(function (results) {
     });
 
     //checkApiAnnotationsFormat.push(`##[error] ${splitItem[1].replace(")","")} file=${path} error ${message} path:${path} name:${name}`);
-    checkApiAnnotationsFormat.push(`##[error] ${message}`)
+    checkApiAnnotationsFormat.push(`echo "::error file=app.js,line=10,col=15::Something went wrong"`)
    });
 
    checkApiAnnotationsFormat.push(testSummary);
