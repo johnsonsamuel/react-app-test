@@ -1,2 +1,1 @@
-var data = '<html><body>Hola</body></html>';
-console.log(data)
+process.stdin.pipe(process.stdout);
