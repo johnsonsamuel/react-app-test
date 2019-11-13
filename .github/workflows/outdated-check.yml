@@ -12,9 +12,9 @@ jobs:
         node-version: [8.x]
 
     steps:
-    - name: npm install, build, and test
+    - name: npm outdated
       run: |
-        npm outdated > results.html
+        npm outdated
       env:
         CI: false
 
