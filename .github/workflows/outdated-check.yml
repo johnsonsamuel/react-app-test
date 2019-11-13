@@ -14,4 +14,4 @@ jobs:
         MIDDLE_NAME: The
         LAST_NAME: Octocat
       run: |
-        echo npm outdated.
+        npm outdated.
