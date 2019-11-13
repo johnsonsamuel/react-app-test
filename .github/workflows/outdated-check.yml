@@ -1,4 +1,4 @@
-name: Outdated npm check.
+name: Outdated npm check and audit.
 
 on: [push]
 
@@ -20,6 +20,9 @@ jobs:
     - name: npm outdated
       run: |
         npm outdated | node parser.js
+    - name: npm audit
+      run: |
+        npm audit | node parser.js
       env:
         CI: false
 
