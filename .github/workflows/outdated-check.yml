@@ -23,6 +23,10 @@ jobs:
     - name: npm audit
       run: |
         npm audit | node parser.js
+    - name: Archive code coverage results
+        with:
+          name: code-coverage-report
+          path: results.html
       env:
         CI: false
 
