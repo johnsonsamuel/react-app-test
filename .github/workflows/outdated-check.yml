@@ -1,9 +1,9 @@
-name: npm check and audit.
+name: npm check outdated and audit.
 
 on: [push]
 
 jobs:
-  build:
+  outdated_and_audit:
 
     runs-on: ubuntu-latest
 
