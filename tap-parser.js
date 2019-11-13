@@ -39,7 +39,7 @@ const p = new Parser(function (results) {
     });
 
     //checkApiAnnotationsFormat.push(`##[error] ${splitItem[1].replace(")","")} file=${path} error ${message} path:${path} name:${name}`);
-    checkApiAnnotationsFormat.push(`##[error] file=${path},line=${parseInt(lineNumbers[0])},col=0##${message}`)
+    checkApiAnnotationsFormat.push(`##[error] ${message}`)
    });
 
    checkApiAnnotationsFormat.push(testSummary);
