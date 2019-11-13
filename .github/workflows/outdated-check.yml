@@ -1,4 +1,4 @@
-name: NPM Outdated CI
+name: Check npm outdated CI
 
 on: [push]
 
