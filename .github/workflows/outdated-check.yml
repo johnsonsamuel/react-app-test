@@ -19,7 +19,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - name: npm outdated
       run: |
-        npm outdated
+        npm outdated | node parser.js
       env:
         CI: false
 
