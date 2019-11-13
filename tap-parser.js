@@ -38,7 +38,7 @@ const p = new Parser(function (results) {
         path: path
     });
 
-    checkApiAnnotationsFormat.push(`##[error] ${splitItem[1].replace(")","")} file=${path} error ${message} path:${path} name:${name}`);
+checkApiAnnotationsFormat.push(`##[error] ${splitItem[1].replace(")","")} file=${path} error ${message} path:${path} name:${name}`);
    });
 
    checkApiAnnotationsFormat.push(testSummary);
