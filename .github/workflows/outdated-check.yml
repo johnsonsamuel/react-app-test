@@ -1,4 +1,4 @@
-name: Outdated npm check and audit.
+name: npm check and audit.
 
 on: [push]
 
