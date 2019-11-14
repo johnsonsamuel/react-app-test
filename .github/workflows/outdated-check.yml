@@ -20,6 +20,9 @@ jobs:
     - name: npm outdated
       run: |
         npm outdated | node parser.js
+    - name: my first step
+      if: success()
+      run: echo "thank you"
     - name: npm audit
       run: |
         npm audit | node parser.js
