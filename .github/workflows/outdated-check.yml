@@ -17,11 +17,11 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - name: npm outdated
+    - name: npm-outdated
       run: |
         npm outdated | node parser.js
     - name: Get the output time
-      run: echo "The steps was ${{ JSON.stringify(steps) }}"
+      run: echo "The steps was ${{ steps.name.npm-outdated }}"
     - name: npm audit
       run: |
         npm audit | node parser.js
