@@ -27,7 +27,7 @@ const p = new Parser(function (results) {
       const lineNumbers = splitItem[1].replace(")","").split(':');         
       const path = fileName.split('(')[1]+'js';
 
-      annotations.push({
+      /* annotations.push({
         start_line: parseInt(lineNumbers[0]),
         end_line: parseInt(lineNumbers[0]),
         start_column: 0,
@@ -36,10 +36,10 @@ const p = new Parser(function (results) {
         title: name,
         message: JSON.stringify(message),
         path: path
-    });
+    }); */
 
-    checkApiAnnotationsFormat.push(`##[warning] ${splitItem[1].replace(")","")} file=${path} error ${message} path:${path} name:${name}`);
-  //checkApiAnnotationsFormat.push(`##[error] ${message} ${splitItem[1].replace(")","")} file=${path}, line=${parseInt(lineNumbers[0])} ,col=0::${message}`)
+    checkApiAnnotationsFormat.push(`##[error] ${splitItem[1].replace(")","")} error ${message} path:${path} name:${name}`);
+    //checkApiAnnotationsFormat.push(`##[error] ${splitItem[1].replace(")","")} file=${path}, line=${parseInt(lineNumbers[0])} ,col=0::${message}`)
    });
 
    checkApiAnnotationsFormat.push(testSummary);
