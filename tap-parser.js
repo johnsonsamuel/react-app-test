@@ -42,8 +42,8 @@ const p = new Parser(function (results) {
     checkApiAnnotationsFormat.push(`##[error] ${splitItem[1].replace(")","")} error ${JSON.stringify(message)} path:${path} name:${name}`);
    });
 
-   //checkApiAnnotationsFormat.push(testSummary);
-   checkApiAnnotationsFormat.push(`##[debug] ${JSON.stringify(testSummary)} `);
+   checkApiAnnotationsFormat.push(testSummary);
+   //checkApiAnnotationsFormat.push(`##[debug] ${JSON.stringify(testSummary)} `);
    console.log(checkApiAnnotationsFormat); //FIXME: Printing the error as per the check run format
 });
 
