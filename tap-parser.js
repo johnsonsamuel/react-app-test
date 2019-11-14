@@ -44,7 +44,7 @@ const p = new Parser(function (results) {
    });
 
    checkApiAnnotationsFormat.push(`##[warning] count: 7, pass: 3, fail: 4`);
-   console.log(checkApiAnnotationsFormat); //FIXME: Printing the error as per the check run format
+   console.log(checkApiAnnotationsFormat); //FIXME: Printing the error as per the check run format.
 });
 
 
