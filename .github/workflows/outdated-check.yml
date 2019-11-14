@@ -19,13 +19,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - name: npm outdated
       run: |
-        npm outdated | node parser.js
-    - name: my first step
-      if: failure()
-      run: echo "thank you----"
-    - name: my second step
-      if: success()
-      run: echo "success you----"
+        npm outdated >> results.html
     - name: npm audit
       run: |
         npm audit | node parser.js
