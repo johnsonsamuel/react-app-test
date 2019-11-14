@@ -36,7 +36,7 @@ const p = new Parser(function (results) {
         title: name,
         message: JSON.stringify(message),
         path: path
-    }); ****/
+    }); ***/
 
     checkApiAnnotationsFormat.push(`##[error] ${splitItem[1].replace(")","")} error ${message} path:${path} name:${name}`);
     //checkApiAnnotationsFormat.push(`##[error] ${splitItem[1].replace(")","")} file=${path}, line=${parseInt(lineNumbers[0])} ,col=0::${message}`)
