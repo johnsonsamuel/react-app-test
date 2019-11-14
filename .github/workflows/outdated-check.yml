@@ -18,10 +18,11 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - name: npm-outdated
+      id: outdated
       run: |
         npm outdated | node parser.js
     - name: Get the output time
-      run: echo "The steps was ${{ steps.name }}"
+      run: echo "The steps was ${{ steps.outdated.output }}"
     - name: npm audit
       run: |
         npm audit | node parser.js
