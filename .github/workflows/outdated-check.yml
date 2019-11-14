@@ -1,4 +1,4 @@
-name: npm check outdated and audit.
+name: Outdated and Audit CI.
 
 on: [push]
 
