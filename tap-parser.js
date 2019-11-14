@@ -43,7 +43,7 @@ const p = new Parser(function (results) {
    });
 
    //checkApiAnnotationsFormat.push(testSummary);
-   checkApiAnnotationsFormat.push(`##[warning] ${JSON.stringify(testSummary)} `);
+   checkApiAnnotationsFormat.push(`##[debug] ${JSON.stringify(testSummary)} `);
    console.log(checkApiAnnotationsFormat); //FIXME: Printing the error as per the check run format
 });
 
