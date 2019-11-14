@@ -15,6 +15,7 @@ const p = new Parser(function (results) {
 
    const stringifiedResult =  JSON.stringify(results).trim(); 
    const parseResult = JSON.parse(stringifiedResult.replace(/'/g, ""));
+   console.log(parseResult)
 
    //Iterate through the failures and add annotations 
    parseResult.failures.map(item => {
@@ -24,7 +25,7 @@ const p = new Parser(function (results) {
       const fileName = splitItem[0];
       const name = item.diag.name;
       const message = item.diag.message || item.diag.values;
-      const lineNumbers = splitItem[1].replace(")","").split(':');         
+    //   const lineNumbers = splitItem[1].replace(")","").split(':');         
       const path = fileName.split('(')[1]+'js';
 
       /* annotations.push({
@@ -42,7 +43,7 @@ const p = new Parser(function (results) {
     //checkApiAnnotationsFormat.push(`##[error] ${splitItem[1].replace(")","")} file=${path}, line=${parseInt(lineNumbers[0])} ,col=0::${message}`)
    });
 
-   checkApiAnnotationsFormat.push(testSummary);
+   checkApiAnnotationsFormat.push(`##[info] count: 7, pass: 3, fail: 4`);
    console.log(checkApiAnnotationsFormat); //FIXME: Printing the error as per the check run format
 });
 
