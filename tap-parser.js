@@ -15,7 +15,6 @@ const p = new Parser(function (results) {
 
    const stringifiedResult =  JSON.stringify(results).trim(); 
    const parseResult = JSON.parse(stringifiedResult.replace(/'/g, ""));
-   //console.log(parseResult)
 
    //Iterate through the failures and add annotations 
    parseResult.failures.map(item => {
