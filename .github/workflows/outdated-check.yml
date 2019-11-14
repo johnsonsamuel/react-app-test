@@ -22,7 +22,7 @@ jobs:
       run: |
         npm outdated | node parser.js
     - name: Get the output time
-      run: echo "The time was ${{ steps.hello.outputs.time }}"
+      run: echo "The time was ${{ steps.hello.outputs }}"
     - name: npm audit
       run: |
         npm audit | node parser.js
