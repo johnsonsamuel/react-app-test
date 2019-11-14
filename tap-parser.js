@@ -4,9 +4,10 @@ const annotations = [];
 const checkApiAnnotationsFormat = []; //annotations to feed as per github check api...
 
 const p = new Parser(function (results) {
-
+    
    //Adding the unit test count.... 
    const testOutput = JSON.parse(JSON.stringify(results));
+   
    const testSummary = {
         total: testOutput.count,
         failure: testOutput.fail,
@@ -16,7 +17,6 @@ const p = new Parser(function (results) {
    const stringifiedResult =  JSON.stringify(results).trim(); 
    const parseResult = JSON.parse(stringifiedResult.replace(/'/g, ""));
 
-   
    //Iterate through the failures and add annotations 
    parseResult.failures.map(item => {
        if(!item.diag) return;
@@ -39,12 +39,12 @@ const p = new Parser(function (results) {
         path: path
     }); */
 
-    checkApiAnnotationsFormat.push(`##[error] ${splitItem[1].replace(")","")} error ${message} path:${path} name:${name}`);
-    //checkApiAnnotationsFormat.push(`##[error] ${splitItem[1].replace(")","")} file=${path}, line=${parseInt(lineNumbers[0])} ,col=0::${message}`)
+    checkApiAnnotationsFormat.push(`##[error] ${splitItem[1].replace(")","")} error ${JSON.stringify(message)} path:${path} name:${name}`);
    });
 
-   checkApiAnnotationsFormat.push(`##[warning] count: 7, pass: 3, fail: 4`);
-   console.log(checkApiAnnotationsFormat); //FIXME: Printing the error as per the check run format.
+   //checkApiAnnotationsFormat.push(testSummary);
+   checkApiAnnotationsFormat.push(`##[warning] ${JSON.stringify(testSummary)} `);
+   console.log(checkApiAnnotationsFormat); //FIXME: Printing the error as per the check run format
 });
 
 
