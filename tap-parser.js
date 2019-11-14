@@ -43,7 +43,7 @@ const p = new Parser(function (results) {
     //checkApiAnnotationsFormat.push(`##[error] ${splitItem[1].replace(")","")} file=${path}, line=${parseInt(lineNumbers[0])} ,col=0::${message}`)
    });
 
-   checkApiAnnotationsFormat.push(`##[info] count: 7, pass: 3, fail: 4`);
+   checkApiAnnotationsFormat.push(`##[warning] count: 7, pass: 3, fail: 4`);
    console.log(checkApiAnnotationsFormat); //FIXME: Printing the error as per the check run format
 });
 
