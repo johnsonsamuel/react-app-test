@@ -1,2 +1,0 @@
----_new branch. Signed commit. Updated gpg key  verification.
-
