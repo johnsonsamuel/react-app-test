@@ -1,6 +1,7 @@
 name: CI
 
 on:
+  check_run:
   schedule:
     # * is a special character in YAML so you have to quote this string
     - cron:  '*/1 * * * *'
