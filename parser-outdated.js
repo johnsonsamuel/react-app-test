@@ -18,7 +18,7 @@ stdin.on('end', function () {
         annotationsFormat.push(`##[warning] current:${outputJSON}`);
     });
     
-    //stdout.write(JSON.stringify(outputJSON));
+    //stdout.write(JSON.stringify(outputJSON));/
     //stdout.write('\n');
    /*  stdout.write(JSON.stringify(annotationsFormat));
     stdout.write('\n'); */
