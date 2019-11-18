@@ -14,7 +14,7 @@ stdin.on('end', function () {
     const outputJSON = JSON.parse(inputChunks);
     Object.values(outputJSON).map(item => {
 
-        annotationsFormat.push(`##[warning] current:${item}`);
+        annotationsFormat.push(`##[warning] current:${JSON.stringify(item)}`);
     });
     
     //stdout.write(JSON.stringify(outputJSON));
