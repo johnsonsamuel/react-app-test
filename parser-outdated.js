@@ -22,6 +22,6 @@ stdin.on('end', function () {
     //stdout.write('\n');
    /*  stdout.write(JSON.stringify(annotationsFormat));
     stdout.write('\n'); */
-    console.log(outputJSON)
+    console.log('##[warning]~'+JSON.stringify(outputJSON))
 });
 
