@@ -13,13 +13,13 @@ stdin.on('data', function (chunk) {
 stdin.on('end', function () {
     if(!inputChunks.length) return;
     const outputJSON = JSON.parse(inputChunks);
-   // console.log(outputJSON)
-   /*  Object.values(outputJSON).map(item => {
+   /* console.log(outputJSON)
+    Object.values(outputJSON).map(item => {
 
         annotationsFormat.push(`##[warning] current:${outputJSON}`);
     });
     
-    stdout.write(JSON.stringify(outputJSON));/
+    stdout.write(JSON.stringify(outputJSON));
     
     stdout.write('\n');
     stdout.write(JSON.stringify(annotationsFormat));
