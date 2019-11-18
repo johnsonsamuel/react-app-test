@@ -20,6 +20,8 @@ jobs:
     - name: npm-outdated
       id: outdated
       run: |
+        npm ci
+        npm run build --if-present
         npm outdated --json | node parser-outdated.js
       env:
         CI: false
