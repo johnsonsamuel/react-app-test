@@ -1,9 +1,9 @@
-name: Outdated CI.
+name: Audit CI.
 
 on: [push]
 
 jobs:
-  outdated:
+  audit:
 
     runs-on: ubuntu-latest
 
@@ -17,10 +17,9 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - name: npm-outdated
-      id: outdated
+    - name: npm audit
       run: |
-        npm outdated --json | node parser-outdated.js
+        npm audit | node parser.js
       env:
         CI: false
 
