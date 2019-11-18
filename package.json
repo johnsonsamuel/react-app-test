@@ -5,6 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "ava": "^2.1.0",
+    "chalk": "^2.0.0",
     "tap-bail": "^1.0.0"
   },
   "devDependencies": {

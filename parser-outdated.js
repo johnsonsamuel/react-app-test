@@ -11,6 +11,7 @@ stdin.on('data', function (chunk) {
 });
 
 stdin.on('end', function () {
+    if(!inputChunks.length) return;
     const outputJSON = JSON.parse(inputChunks);
    // console.log(outputJSON)
    /*  Object.values(outputJSON).map(item => {
