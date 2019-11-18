@@ -14,13 +14,13 @@ stdin.on('end', function () {
     const outputJSON = JSON.parse(inputChunks);
     Object.values(outputJSON).map(item => {
 
-        annotationsFormat.push(`##[warning] current:${(item.current)}`);
+        annotationsFormat.push(`##[warning] current:${(JSON.stringify(item))}`);
     });
     
     //stdout.write(JSON.stringify(outputJSON));
     //stdout.write('\n');
    /*  stdout.write(JSON.stringify(annotationsFormat));
     stdout.write('\n'); */
-    console.log(JSON.stringify(annotationsFormat))
+    console.log(annotationsFormat)
 });
 
