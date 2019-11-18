@@ -12,7 +12,7 @@ stdin.on('data', function (chunk) {
 
 stdin.on('end', function () {
     const outputJSON = JSON.parse(inputChunks);
-   // console.log(outputJSON);
+   // console.log(outputJSON)
    /*  Object.values(outputJSON).map(item => {
 
         annotationsFormat.push(`##[warning] current:${outputJSON}`);
@@ -23,6 +23,6 @@ stdin.on('end', function () {
     stdout.write('\n');
     stdout.write(JSON.stringify(annotationsFormat));
     stdout.write('\n'); */
-    console.log('##[warning]~'+outputJSON);
+    console.log('##[warning]~'+JSON.stringify(outputJSON));
 });
 
