@@ -14,7 +14,7 @@ stdin.on('end', function () {
     const outputJSON = JSON.parse(inputChunks);
     Object.values(outputJSON).map(item => {
 
-        annotationsFormat.push(`##[warning] current:${item.current} latest:${item.latest} packageName:${item.location.split('/')[1]}`);
+        annotationsFormat.push(`##[warning] current:${item}`);
     });
     
     //stdout.write(JSON.stringify(outputJSON));
