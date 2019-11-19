@@ -12,6 +12,6 @@ stdin.on('data', function (chunk) {
 
 stdin.on('end', function () {
     if(!inputChunks.length) return;
-    console.log('##[warning]~'+(inputChunks));
+    console.log('##[warning]~'+(JSON.stringify(inputChunks)));
 });
 
