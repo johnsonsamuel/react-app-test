@@ -6,6 +6,10 @@
   "dependencies": {
     "ava": "^2.0.0",
     "chalk": "^2.0.0",
+    "jest": "^24.9.0",
+    "jest-cli": "^24.9.0",
+    "lodash": "^4.17.11",
+    "mongoose": "^5.3.3",
     "tap-bail": "^1.0.0"
   },
   "devDependencies": {
