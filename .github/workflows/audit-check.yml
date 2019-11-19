@@ -21,7 +21,7 @@ jobs:
       run: |
         npm ci
         npm run build --if-present
-        npm audit --json
+        npm audit --json | node parser-audit.js
       env:
         CI: false
 
