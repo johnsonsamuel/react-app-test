@@ -12,7 +12,7 @@ stdin.on('data', function (chunk) {
 
 stdin.on('end', function () {
     if(!inputChunks.length) return;
-    //console.log('='+inputChunks)
-    console.log('##[warning]~'+JSON.stringify(inputChunks));
+    const outputJSON = JSON.parse(inputChunks);
+    console.log('##[warning]~'+JSON.stringify(outputJSON));
 });
 
