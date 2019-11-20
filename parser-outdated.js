@@ -1,7 +1,6 @@
 var stdin = process.stdin,
     stdout = process.stdout,
-    inputChunks = [],
-    annotationsFormat = [];
+    inputChunks = [];
 
 stdin.resume();
 stdin.setEncoding('utf8');
