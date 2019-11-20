@@ -9,7 +9,6 @@ stdin.on('data', function (chunk) {
     inputChunks.push(chunk);
 });
 
-//comments
 stdin.on('end', function () {
     if(!inputChunks.length) return;
     const outputJSON = JSON.parse(inputChunks);
