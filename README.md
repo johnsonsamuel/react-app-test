@@ -3,7 +3,7 @@
 
 n
 s
-s
+ss
 s
 sd
 ssdd
