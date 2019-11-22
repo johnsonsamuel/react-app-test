@@ -1,9 +1,10 @@
 ## README....
 
-s
-ds
+ss
+dsd
 sc
 s
-d
-ds
+ddad
+dss
+ssd
 ss
