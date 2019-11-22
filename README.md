@@ -6,4 +6,4 @@ sc
 s
 d
 ds
-ss
+ssd
