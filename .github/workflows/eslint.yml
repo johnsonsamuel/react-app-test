@@ -1,5 +1,8 @@
 name: ESLint CI
 
+env:
+  comment: hola
+
 on: [push]
 
 jobs:
