@@ -1,9 +1,9 @@
 ## README....
 
 s
-d
+ds
 sc
 s
 d
-d
-s
+ds
+ss
