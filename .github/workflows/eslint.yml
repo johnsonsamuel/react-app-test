@@ -3,7 +3,9 @@ name: ESLint CI
 env:
   type: eslint
 
-on: [check_run.completed]
+on: 
+  check_run:
+    types: [completed]
 
 jobs:
   eslint:
