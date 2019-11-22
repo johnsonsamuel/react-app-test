@@ -1,15 +1,12 @@
-name: ESLint CI/.
+name: ESLint CI
 
 env:
-  type: eslint
+  comment: hola
 
-on: 
-  check_run:
-    types: [completed]
+on: [push]
 
 jobs:
   eslint:
-    
 
     runs-on: ubuntu-latest
 
