@@ -25,7 +25,7 @@ jobs:
       run: |
         npm ci
         npm run build --if-present
-        npm outdated --json | node parser-outdated.js
+        npm outdated --json | node parser.js
       env:
         CI: false
 
