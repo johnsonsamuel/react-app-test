@@ -1,5 +1,8 @@
 name: Outdated CI.
 
+env:
+  type: outdated
+
 on: [push]
 
 jobs:

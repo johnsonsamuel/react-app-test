@@ -1,5 +1,8 @@
 name: Audit CI.
 
+env:
+  type: audit
+
 on: [push]
 
 jobs:

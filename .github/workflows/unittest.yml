@@ -1,5 +1,8 @@
 name: Unit Test CI.
 
+env:
+  type: unittest
+
 on: [push]
 
 jobs:
