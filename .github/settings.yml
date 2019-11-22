@@ -1,3 +1,6 @@
 files: {
-  unittest: 'workflows/unittest.yml'
+  unittest: 'workflows/unittest.yml',
+  eslint: 'workflows/eslint.yml',
+  outdated: 'workflows/audit-check.yml',
+  audit: 'workflows/outdated-check.yml'
 }
