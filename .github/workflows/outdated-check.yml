@@ -6,7 +6,7 @@ env:
 on: [push]
 
 jobs:
-  outdated:
+  outdated-check:
 
     runs-on: ubuntu-latest
 

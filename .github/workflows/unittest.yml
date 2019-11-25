@@ -6,7 +6,7 @@ env:
 on: [push]
 
 jobs:
-  tests:
+  tests-check:
 
     runs-on: ubuntu-latest
 
