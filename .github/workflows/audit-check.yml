@@ -3,7 +3,8 @@ name: Audit CI.
 env:
   type: audit
 
-on: [check_run.created]
+on: 
+  check_run
 
 jobs:
   audit-check:
