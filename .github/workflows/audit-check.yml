@@ -3,7 +3,7 @@ name: Audit CI.
 env:
   type: audit
 
-on: [push]
+on: [check_run.created]
 
 jobs:
   audit-check:
