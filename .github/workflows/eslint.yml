@@ -1,12 +1,12 @@
-name: Audit CI.
+name: ESLint CI
 
 env:
-  type: audit
+  type: eslint
 
 on: [push]
 
 jobs:
-  audit:
+  eslint-check:
 
     runs-on: ubuntu-latest
 
@@ -20,11 +20,11 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - name: npm audit
+    - name: npm lint
       run: |
-        npm ci
-        npm run build --if-present
-        npm audit --json | node parser.js
+        npm install
+        #npm run build --if-present
+        npm run lint
+        echo Add other actions to build..
       env:
-        CI: false
-
+        CI: true

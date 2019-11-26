@@ -1,12 +1,12 @@
-name: Audit CI.
+name: Unit Test CI.
 
 env:
-  type: audit
+  type: unittest
 
 on: [push]
 
 jobs:
-  audit:
+  tests-check:
 
     runs-on: ubuntu-latest
 
@@ -20,11 +20,11 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - name: npm audit
+    - name: npm install, build, and test
       run: |
         npm ci
         npm run build --if-present
-        npm audit --json | node parser.js
+        npx ava --tap | node tap-parser.js
       env:
         CI: false
 
