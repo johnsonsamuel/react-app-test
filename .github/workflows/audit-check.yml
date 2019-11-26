@@ -1,4 +1,4 @@
-name: Audit CI.
+name: Audit CI..
 
 env:
   type: audit
