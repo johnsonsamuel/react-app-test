@@ -1,0 +1,30 @@
+name: ESLint CI
+
+env:
+  type: eslint
+
+on: [push]
+
+jobs:
+  eslint-check:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [8.x]
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - name: npm lint
+      run: |
+        npm install
+        #npm run build --if-present
+        npm run lint
+        echo Add other actions to build..
+      env:
+        CI: true
