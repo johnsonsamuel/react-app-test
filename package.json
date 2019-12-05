@@ -1,0 +1,45 @@
+{
+  "name": "react-app-test",
+  "version": "1.0.0",
+  "description": "holalaa hello world, probot.",
+  "main": "index.js",
+  "dependencies": {
+    "ava": "^2.0.0",
+    "chalk": "^2.4.2",
+    "clean-css": "^4.2.1",
+    "jest": "^24.9.0",
+    "jest-cli": "^24.9.0",
+    "tap-bail": "^1.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.5.1",
+    "eslint-plugin-react": "^7.16.0",
+    "tap-parser": "^10.0.1"
+  },
+  "scripts": {
+    "test": "ava",
+    "lint": "eslint ."
+  },
+  "ava": {
+    "files": [
+      "test.spec.js",
+      "test2.spec.js",
+      "test/sum.spec.js"
+    ],
+    "powerAssert": true,
+    "failFast": false,
+    "failWithoutAssertions": true,
+    "babel": {},
+    "verbose": true
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johnsonsamuel/react-app-test.git"
+  },
+  "author": "John",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/johnsonsamuel/react-app-test/issues"
+  },
+  "homepage": "https://github.com/johnsonsamuel/react-app-test#readme"
+}

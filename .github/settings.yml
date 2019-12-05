@@ -1,0 +1,6 @@
+files: {
+  unittest: 'unittest',
+  eslint: 'eslint',
+  outdated: 'outdated',
+  audit: 'audit'
+}
