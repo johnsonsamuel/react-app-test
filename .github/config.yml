@@ -4,6 +4,6 @@ mergeConflictCheck:
   state: 'dirty'
 
 fileMissingCheck:
-  commentTitle: 'Changelog file missing'
+  commentTitle: 'Changelog file is missing'
   label: 'Missing Changelog'
   path: 'CHANGELOG.md'
