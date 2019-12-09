@@ -1,4 +1,4 @@
-mergeConflictIssueComment: >
-  Please fix the conflicts!
-  Please check
-  I am a hello
+locations:
+  - title
+  - label_name
+  - commit_subject
