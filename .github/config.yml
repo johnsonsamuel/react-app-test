@@ -1,4 +1,4 @@
-locations:
-  - title
-  - label_name
-  - commit_subject
+merge-conflict-check:
+  comment-title: 'Kindly fix the conflicts'
+  label: 'merge conflict'
+  state: 'dirty'
