@@ -1,9 +1,0 @@
-mergeConflictCheck:
-  commentTitle: 'Kindly fix the conflicts'
-  label: 'merge conflict'
-  state: 'dirty'
-
-fileMissingCheck:
-  commentTitle: 'Changelog file is missing'
-  label: 'Missing Changelog'
-  path: 'CHANGELOG.md'
